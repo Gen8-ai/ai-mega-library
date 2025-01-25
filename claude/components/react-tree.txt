@@ -1,0 +1,60 @@
++------------------------------------------+
+|            [App Component]                |
+|  State: {theme, user, notifications}      |
++------------------+---------------------+--+
+                   |
+        +----------+----------+
+        |                     |
+   [Layout HOC]          [Auth Provider]
+    ├─ Header            └─ {userContext}
+    └─ Footer
+        |
++-------+--------+----------------+
+|                |                |
+|                |                |
+v                v                v
+[Sidebar]    [MainContent]    [RightPanel]
+├─ Nav       ├─ Router       ├─ Notifications
+├─ Menu      ├─ Views        └─ UserProfile
+└─ Status    └─ Dashboard
+    |            |
+    |        +---+---+-------------+
+    |        |       |             |
+    v        v       v             v
+[TreeView] [Grid] [Charts]    [Controls]
+├─ Node    ├─ Row  ├─ Line        ├─ Buttons
+├─ Leaf    ├─ Col  ├─ Bar         ├─ Inputs
+└─ Branch  └─ Cell └─ Pie         └─ Forms
+
+Legend:
+├─ Child Component
+└─ Last Child
+↑↓ State Flow
+{} State/Context
+
+Component Types:
+◉ Container Components (manages state)
+○ Presentational Components (display only)
+□ HOC/Providers (enhances components)
+
+State Management:
+↑ Props Up
+↓ State Down
+↔ Context Flow
+
+File Structure:
+src/
+├─ components/
+|  ├─ layout/
+|  |  ├─ Header.tsx
+|  |  └─ Footer.tsx
+|  ├─ sidebar/
+|  |  ├─ Nav.tsx
+|  |  └─ Menu.tsx
+|  └─ content/
+|     ├─ Grid.tsx
+|     └─ Charts.tsx
+├─ pages/
+|  ├─ Dashboard.tsx
+|  └─ Profile.tsx
+└─ App.tsx

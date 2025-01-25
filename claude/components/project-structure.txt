@@ -1,0 +1,65 @@
+PROJECT ROOT
+│
+├─ [Documentation]
+│  ├─ README.md           # Project overview and setup guide
+│  ├─ CONTRIBUTING.md     # Contribution guidelines
+│  └─ docs/              # Detailed documentation
+│     ├─ architecture/   # System design docs
+│     ├─ components/     # Component API docs
+│     └─ styles/         # Style guide docs
+│
+├─ [Source Code]
+│  src/
+│  ├─ components/        # Reusable UI components
+│  │  ├─ layout/        # Layout components
+│  │  │  ├─ Header.tsx  # Top navigation + branding
+│  │  │  └─ Footer.tsx  # Site footer content
+│  │  │
+│  │  ├─ sidebar/       # Sidebar components
+│  │  │  ├─ Nav.tsx     # Navigation menu
+│  │  │  └─ Menu.tsx    # Expandable menu items
+│  │  │
+│  │  └─ content/       # Main content components
+│  │     ├─ Grid.tsx    # Data grid component
+│  │     └─ Charts.tsx  # Data visualization
+│  │
+│  ├─ pages/            # Page components
+│  │  ├─ Dashboard.tsx  # Main dashboard view
+│  │  └─ Profile.tsx    # User profile page
+│  │
+│  ├─ styles/           # Global styles
+│  │  └─ globals.css    # Global CSS
+│  │
+│  ├─ utils/            # Utility functions
+│  │  └─ helpers.ts     # Helper functions
+│  │
+│  └─ App.tsx           # Root component
+│
+├─ .gitignore           # Git ignore rules
+├─ tsconfig.json        # TypeScript config
+├─ package.json         # Dependencies
+└─ vite.config.ts       # Vite configuration
+
+Component Documentation Template:
++------------------------------------------+
+|            [Component Name]               |
++------------------------------------------+
+Description: Brief component description
+Props:
+  • propName: PropType
+    Description of the prop
+Usage:
+  import { Component } from './Component'
+  <Component prop={value} />
+
+Directory Structure Guide:
+┌─ components/   # Reusable UI components
+├─ pages/        # Page-level components
+├─ utils/        # Helper functions
+└─ styles/       # Global styles
+
+Best Practices:
+• Keep components focused and single-responsibility
+• Use TypeScript interfaces for prop types
+• Document component APIs thoroughly
+• Follow consistent naming conventions

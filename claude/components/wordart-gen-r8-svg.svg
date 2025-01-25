@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
+  <defs>
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="atop" result="composite"/>
+      <feFlood flood-color="#4f46e5" flood-opacity="0.2" result="color"/>
+      <feComposite in="color" in2="composite" operator="in" result="shadow"/>
+      <feComposite in="shadow" in2="SourceGraphic" operator="over"/>
+    </filter>
+    
+    <filter id="dropShadow">
+      <feDropShadow dx="3" dy="-1" stdDeviation="0" flood-color="#4f46e5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&amp;display=swap');
+  </style>
+
+  <!-- Shadow Text -->
+  <text 
+    x="50%" 
+    y="50%" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+    font-family="Anton, sans-serif"
+    font-size="160"
+    fill="none"
+    stroke="#4f46e5"
+    stroke-opacity="0.2"
+    stroke-width="1.5"
+    transform="translate(3,-1)"
+  >GEN R8</text>
+
+  <!-- Main Text -->
+  <text 
+    x="50%" 
+    y="50%" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+    font-family="Anton, sans-serif"
+    font-size="160"
+    fill="none"
+    stroke="#4f46e5"
+    stroke-width="1.5"
+    filter="url(#innerGlow)"
+  >GEN R8</text>
+</svg>
